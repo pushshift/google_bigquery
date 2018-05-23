@@ -1,6 +1,16 @@
-# google_bigquery
+# Pushshift Google BigQuery Data Streams
 
-### Comments Table Schema
+## Reddit
+
+### Dataset location
+
+pushshift.rt_reddit
+
+### Tables
+
+comments
+
+### comments Table Schema
 ```
   Last modified                  Schema                  Total Rows   Total Bytes   Expiration      Time Partitioning       Labels  
  ----------------- ------------------------------------- ------------ ------------- ------------ -------------------------- -------- 

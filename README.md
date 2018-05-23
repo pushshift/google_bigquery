@@ -37,3 +37,9 @@ comments
                     |- permalink: string                                                                                             
                     |- retrieved_on: timestamp                                                                                       
 ```                                                                                 
+
+### Standard SQL Query Examples
+
+How many comments have been made in the last minute?
+
+    SELECT count(*) FROM `pushshift.rt_reddit.comments` WHERE created_utc > TIMESTAMP_SUB(CURRENT_TIMESTAMP, INTERVAL 1 MINUTE)

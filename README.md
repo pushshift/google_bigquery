@@ -43,3 +43,7 @@ comments
 How many comments have been made in the last minute?
 
     SELECT count(*) FROM `pushshift.rt_reddit.comments` WHERE created_utc > TIMESTAMP_SUB(CURRENT_TIMESTAMP, INTERVAL 1 MINUTE)
+    
+What are the most active subreddits over the past five minutes?
+
+    SELECT subreddit, count(*) FROM `pushshift.rt_reddit.comments` WHERE created_utc > TIMESTAMP_SUB(CURRENT_TIMESTAMP, INTERVAL 5 MINUTE) GROUP BY 1 ORDER BY 2 DESC
